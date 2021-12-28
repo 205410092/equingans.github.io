@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>responsif</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+	body{
+		width: 100%;
+		background: #blue;
+	} #tampil img{
+
+		display: inline-block;
+		margin-left: 5px;
+		height: 200px;
+		width: 200px;
+	} #tampil button{
+		border-radius: 30px;
+		height: 30px;
+		width: 100px;
+	}#tampil input{
+		margin-left: 20px;
+
+	}#tes {
+			float: left;
+			font-size: 23px;
+			color: gold;
+			padding-top: 0px;
+			margin-left: 20px;
+	}#tes:hover { cursor: pointer;  }
+	.nav{
+			width: 100px;
+			height: 30px;
+			display: inline-block;
+			margin-left: 10px;
+			text-align: center;
+	}.nav hr{ 
+			height: 2px; background: #blue;
+	}.nav:hover, button{  cursor: pointer; }
+	.nav button{
+		border: none; background-color: white;
+	}.footer{
+		width: 80%;
+		margin-left: 7%;
+		margin-top: -17px;
+		height: 70px;
+		background: brown;
+		text-align: center;	
+	}
+</style>
+</head>
+<body >
+	<center></center>
+	<div class="container">
+		
+		<div class="header">
+			<ul>
+			<center>
+				<h1 style="background:white;border: 3px dashed black;padding: 10px;">SELAMAT DATANG DI WEBSITE DANAU WEEKURI SUMBA</h1>
+				</center>
+			</ul>
+
+		</div>
+		
+	
+				<div class="nav">
+					<button onclick="showPage(1)"><h3 style="margin-bottom: 2px;" >HOME</h3></button>
+					<hr>
+				</div>
+				<div class="nav">
+					<button  onclick="showPage(2)"><h3 style="margin-bottom: 2px;">REGISTRASI</h3></button>
+					<hr>
+				</div>
+				<div class="nav">
+					<button  onclick="showPage(3)"><h3 style="margin-bottom: 2px;">LOGIN</h3></button>
+					<hr>
+				</div>
+			<div class="nav">
+					<button  onclick="showPage(4)"><h3 style="margin-bottom: 2px;">VIDEO</h3></button>
+					<hr>
+				</div>
+				<div id="tampil" style="margin-left: 20px; margin-top: 20px; display: block;" ></div>
+			</div>
+			</center>
+			<script type="text/javascript">
+
+		function showPage(page){
+
+	var div = document.getElementById('tampil');
+	var isi = '';
+	if(page==1){
+		isi+='<h1 style="text-align:center;">Danau Weekuri Sumba</h1>';
+		for(var a=0; a<1; a++){
+			isi+="<h4>"+(a+1)+"  </h4>";
+			isi+='<p>Danau Weekuri yang berwarna hijau kebiru-biruan ini merupakan danau yang sangatlah unik jika dibandingkan dengan danau-danau pada umumnya di Indonesia karena kandungan airnya yang asin dan payau.Kenapa asin? Karena sebenarnya danau ini adalah sebuah laguna yang terbentuk dari air lautan lepas yang berada di kisaran danau. Air tersebut masuk dari celah-celah bebatuan yang berada di gugusan karang sekitaran danau.</p>';
+		}
+	}else if(page==2){
+	isi+='<center>';
+		isi+='<label for="Nama Lengkap">Nama Lengkap</label> : ';
+		isi+='<input type="text" id="Nama Lengkap"  value=""> <br><br>';
+		isi+='<label for="Jenis Kelamin">Jenis Kelamin</label> : ';
+		isi+='<input type="text" id="Jenis Kelamin"  value=""> <br><br>';
+		isi+='<label for="Email">Email</label> : ';
+		isi+='<input type="text" id="Email"  value=""> <br><br>';
+		isi+='<label for="Alamat">Alamat</label> : ';
+		isi+='<input type="text" id="Alamat"  value=""> <br><br>';
+		isi+='<label for="password">Password</label> :'
+		isi+='<input type="password" id="password" value=""><br><br>';
+		isi+='<button >DAFTAR</button>';
+		isi+='</center>'
+	} else if (page==3) {
+		isi+='<center>';
+		isi+='<label for="username">Username</label> : ';
+		isi+='<input type="text" id="username"  value=""> <br><br>';
+		isi+='<label for="password">Password</label> :'
+		isi+='<input type="password" id="password" value=""><br><br>';
+		isi+='<button >Login</button>';
+		isi+='</center>'
+	}else if (page==4){
+		isi+='<center>';
+		isi+='<video controls="" width="300" height="200" id="vid">';
+					isi+='<source src="Danau Weekuri Sumba.mp4" type="video/mp4">';
+				isi+='</video>';
+
+	}
+
+	div.innerHTML = isi;
+}
+	</script>
+</body>
+</html>
